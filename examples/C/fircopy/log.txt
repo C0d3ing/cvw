@@ -1,0 +1,1736 @@
+(spike) core   0: 0x0000000000001000 (0x00000297) auipc   t0, 0x0
+(spike) core   0: 0x0000000000001004 (0x02028593) addi    a1, t0, 32
+(spike) core   0: 0x0000000000001008 (0xf1402573) csrr    a0, mhartid
+(spike) core   0: 0x000000000000100c (0x0182b283) ld      t0, 24(t0)
+(spike) core   0: 0x0000000000001010 (0x00028067) jr      t0
+(spike) core   0: >>>>  _start
+core   0: 0x0000000080000000 (0x00004081) c.li    ra, 0
+(spike) core   0: 0x0000000080000002 (0x00004101) c.li    sp, 0
+(spike) core   0: 0x0000000080000004 (0x00004181) c.li    gp, 0
+(spike) core   0: 0x0000000080000006 (0x00004201) c.li    tp, 0
+(spike) core   0: 0x0000000080000008 (0x00004281) c.li    t0, 0
+(spike) core   0: 0x000000008000000a (0x00004301) c.li    t1, 0
+(spike) core   0: 0x000000008000000c (0x00004381) c.li    t2, 0
+(spike) core   0: 0x000000008000000e (0x00004401) c.li    s0, 0
+(spike) core   0: 0x0000000080000010 (0x00004481) c.li    s1, 0
+(spike) core   0: 0x0000000080000012 (0x00004501) c.li    a0, 0
+(spike) core   0: 0x0000000080000014 (0x00004581) c.li    a1, 0
+(spike) core   0: 0x0000000080000016 (0x00004601) c.li    a2, 0
+(spike) core   0: 0x0000000080000018 (0x00004681) c.li    a3, 0
+(spike) core   0: 0x000000008000001a (0x00004701) c.li    a4, 0
+(spike) core   0: 0x000000008000001c (0x00004781) c.li    a5, 0
+(spike) core   0: 0x000000008000001e (0x00004801) c.li    a6, 0
+(spike) core   0: 0x0000000080000020 (0x00004881) c.li    a7, 0
+(spike) core   0: 0x0000000080000022 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x0000000080000024 (0x00004981) c.li    s3, 0
+(spike) core   0: 0x0000000080000026 (0x00004a01) c.li    s4, 0
+(spike) core   0: 0x0000000080000028 (0x00004a81) c.li    s5, 0
+(spike) core   0: 0x000000008000002a (0x00004b01) c.li    s6, 0
+(spike) core   0: 0x000000008000002c (0x00004b81) c.li    s7, 0
+(spike) core   0: 0x000000008000002e (0x00004c01) c.li    s8, 0
+(spike) core   0: 0x0000000080000030 (0x00004c81) c.li    s9, 0
+(spike) core   0: 0x0000000080000032 (0x00004d01) c.li    s10, 0
+(spike) core   0: 0x0000000080000034 (0x00004d81) c.li    s11, 0
+(spike) core   0: 0x0000000080000036 (0x00004e01) c.li    t3, 0
+(spike) core   0: 0x0000000080000038 (0x00004e81) c.li    t4, 0
+(spike) core   0: 0x000000008000003a (0x00004f01) c.li    t5, 0
+(spike) core   0: 0x000000008000003c (0x00004f81) c.li    t6, 0
+(spike) core   0: 0x000000008000003e (0x000062f9) c.lui   t0, 0x1e
+(spike) core   0: 0x0000000080000040 (0x3002a073) csrs    mstatus, t0
+(spike) core   0: 0x0000000080000044 (0x00004285) c.li    t0, 1
+(spike) core   0: 0x0000000080000046 (0x000002fe) c.slli  t0, 31
+(spike) core   0: 0x0000000080000048 (0x0002d863) bgez    t0, pc + 16
+(spike) core   0: 0x0000000080000058 (0x00000297) auipc   t0, 0x0
+(spike) core   0: 0x000000008000005c (0x09028293) addi    t0, t0, 144
+(spike) core   0: 0x0000000080000060 (0x30529073) csrw    mtvec, t0
+(spike) core   0: 0x0000000080000064 (0x00301073) csrw    fcsr, zero
+(spike) core   0: 0x0000000080000068 (0xf0000053) fmv.w.x ft0, zero
+(spike) core   0: 0x000000008000006c (0xf00000d3) fmv.w.x ft1, zero
+(spike) core   0: 0x0000000080000070 (0xf0000153) fmv.w.x ft2, zero
+(spike) core   0: 0x0000000080000074 (0xf00001d3) fmv.w.x ft3, zero
+(spike) core   0: 0x0000000080000078 (0xf0000253) fmv.w.x ft4, zero
+(spike) core   0: 0x000000008000007c (0xf00002d3) fmv.w.x ft5, zero
+(spike) core   0: 0x0000000080000080 (0xf0000353) fmv.w.x ft6, zero
+(spike) core   0: 0x0000000080000084 (0xf00003d3) fmv.w.x ft7, zero
+(spike) core   0: 0x0000000080000088 (0xf0000453) fmv.w.x fs0, zero
+(spike) core   0: 0x000000008000008c (0xf00004d3) fmv.w.x fs1, zero
+(spike) core   0: 0x0000000080000090 (0xf0000553) fmv.w.x fa0, zero
+(spike) core   0: 0x0000000080000094 (0xf00005d3) fmv.w.x fa1, zero
+(spike) core   0: 0x0000000080000098 (0xf0000653) fmv.w.x fa2, zero
+(spike) core   0: 0x000000008000009c (0xf00006d3) fmv.w.x fa3, zero
+(spike) core   0: 0x00000000800000a0 (0xf0000753) fmv.w.x fa4, zero
+(spike) core   0: 0x00000000800000a4 (0xf00007d3) fmv.w.x fa5, zero
+(spike) core   0: 0x00000000800000a8 (0xf0000853) fmv.w.x fa6, zero
+(spike) core   0: 0x00000000800000ac (0xf00008d3) fmv.w.x fa7, zero
+(spike) core   0: 0x00000000800000b0 (0xf0000953) fmv.w.x fs2, zero
+(spike) core   0: 0x00000000800000b4 (0xf00009d3) fmv.w.x fs3, zero
+(spike) core   0: 0x00000000800000b8 (0xf0000a53) fmv.w.x fs4, zero
+(spike) core   0: 0x00000000800000bc (0xf0000ad3) fmv.w.x fs5, zero
+(spike) core   0: 0x00000000800000c0 (0xf0000b53) fmv.w.x fs6, zero
+(spike) core   0: 0x00000000800000c4 (0xf0000bd3) fmv.w.x fs7, zero
+(spike) core   0: 0x00000000800000c8 (0xf0000c53) fmv.w.x fs8, zero
+(spike) core   0: 0x00000000800000cc (0xf0000cd3) fmv.w.x fs9, zero
+(spike) core   0: 0x00000000800000d0 (0xf0000d53) fmv.w.x fs10, zero
+(spike) core   0: 0x00000000800000d4 (0xf0000dd3) fmv.w.x fs11, zero
+(spike) core   0: 0x00000000800000d8 (0xf0000e53) fmv.w.x ft8, zero
+(spike) core   0: 0x00000000800000dc (0xf0000ed3) fmv.w.x ft9, zero
+(spike) core   0: 0x00000000800000e0 (0xf0000f53) fmv.w.x ft10, zero
+(spike) core   0: 0x00000000800000e4 (0xf0000fd3) fmv.w.x ft11, zero
+(spike) core   0: 0x00000000800000e8 (0x00000297) auipc   t0, 0x0
+(spike) core   0: 0x00000000800000ec (0x03828293) addi    t0, t0, 56
+(spike) core   0: 0x00000000800000f0 (0x30529073) csrw    mtvec, t0
+(spike) core   0: 0x00000000800000f4 (0x00001197) auipc   gp, 0x1
+(spike) core   0: 0x00000000800000f8 (0x75418193) addi    gp, gp, 1876
+(spike) core   0: 0x00000000800000fc (0x85f18213) addi    tp, gp, -1953
+(spike) core   0: 0x0000000080000100 (0xfc027213) andi    tp, tp, -64
+(spike) core   0: 0x0000000080000104 (0xf1402573) csrr    a0, mhartid
+(spike) core   0: 0x0000000080000108 (0x00004585) c.li    a1, 1
+(spike) core   0: 0x000000008000010a (0x00b57063) bgeu    a0, a1, pc + 0
+(spike) core   0: 0x000000008000010e (0x00150113) addi    sp, a0, 1
+(spike) core   0: 0x0000000080000112 (0x00000146) c.slli  sp, 17
+(spike) core   0: 0x0000000080000114 (0x00009112) c.add   sp, tp
+(spike) core   0: 0x0000000080000116 (0x01151613) slli    a2, a0, 17
+(spike) core   0: 0x000000008000011a (0x00009232) c.add   tp, a2
+(spike) core   0: 0x000000008000011c (0x7920006f) j       pc + 0x792
+(spike) core   0: >>>>  _init
+core   0: 0x00000000800008ae (0x00007171) c.addi16sp sp, -176
+(spike) core   0: 0x00000000800008b0 (0x0000f506) c.sdsp  ra, 168(sp)
+(spike) core   0: 0x00000000800008b2 (0x0000f122) c.sdsp  s0, 160(sp)
+(spike) core   0: 0x00000000800008b4 (0x0000ed26) c.sdsp  s1, 152(sp)
+(spike) core   0: 0x00000000800008b6 (0x0000e94a) c.sdsp  s2, 144(sp)
+(spike) core   0: 0x00000000800008b8 (0x0000e54e) c.sdsp  s3, 136(sp)
+(spike) core   0: 0x00000000800008ba (0x0000e152) c.sdsp  s4, 128(sp)
+(spike) core   0: 0x00000000800008bc (0x0000fcd6) c.sdsp  s5, 120(sp)
+(spike) core   0: 0x00000000800008be (0x000084aa) c.mv    s1, a0
+(spike) core   0: 0x00000000800008c0 (0x0000892e) c.mv    s2, a1
+(spike) core   0: 0x00000000800008c2 (0x03f10413) addi    s0, sp, 63
+(spike) core   0: 0x00000000800008c6 (0xfc047413) andi    s0, s0, -64
+(spike) core   0: 0x00000000800008ca (0x82018a13) addi    s4, gp, -2016
+(spike) core   0: 0x00000000800008ce (0x82018593) addi    a1, gp, -2016
+(spike) core   0: 0x00000000800008d2 (0x40ba09b3) sub     s3, s4, a1
+(spike) core   0: 0x00000000800008d6 (0x00008a92) c.mv    s5, tp
+(spike) core   0: 0x00000000800008d8 (0x0000864e) c.mv    a2, s3
+(spike) core   0: 0x00000000800008da (0x00008512) c.mv    a0, tp
+(spike) core   0: 0x00000000800008dc (0xbddff0ef) jal     pc - 0x424
+(spike) core   0: >>>>  memcpy
+core   0: 0x00000000800004b8 (0x00c5e7b3) or      a5, a1, a2
+(spike) core   0: 0x00000000800004bc (0x00008fc9) c.or    a5, a0
+(spike) core   0: 0x00000000800004be (0x00008b9d) c.andi  a5, 7
+(spike) core   0: 0x00000000800004c0 (0x0000c38d) c.beqz  a5, pc + 34
+(spike) core   0: 0x00000000800004e2 (0x0000962a) c.add   a2, a0
+(spike) core   0: 0x00000000800004e4 (0xfec57de3) bgeu    a0, a2, pc - 6
+(spike) core   0: 0x00000000800004de (0x00008082) ret
+(spike) core   0: 0x00000000800008e0 (0x82018613) addi    a2, gp, -2016
+(spike) core   0: 0x00000000800008e4 (0x41460633) sub     a2, a2, s4
+(spike) core   0: 0x00000000800008e8 (0x00004581) c.li    a1, 0
+(spike) core   0: 0x00000000800008ea (0x013a8533) add     a0, s5, s3
+(spike) core   0: 0x00000000800008ee (0xc0fff0ef) jal     pc - 0x3f2
+(spike) core   0: >>>>  memset
+core   0: 0x00000000800004fc (0x00c567b3) or      a5, a0, a2
+(spike) core   0: 0x0000000080000500 (0x00008b9d) c.andi  a5, 7
+(spike) core   0: 0x0000000080000502 (0x0000cf81) c.beqz  a5, pc + 24
+(spike) core   0: 0x000000008000051a (0x0ff5f593) andi    a1, a1, 255
+(spike) core   0: 0x000000008000051e (0x010107b7) lui     a5, 0x1010
+(spike) core   0: 0x0000000080000522 (0x10178793) addi    a5, a5, 257
+(spike) core   0: 0x0000000080000526 (0x02079713) slli    a4, a5, 32
+(spike) core   0: 0x000000008000052a (0x000097ba) c.add   a5, a4
+(spike) core   0: 0x000000008000052c (0x02f585b3) mul     a1, a1, a5
+(spike) core   0: 0x0000000080000530 (0x0000962a) c.add   a2, a0
+(spike) core   0: 0x0000000080000532 (0xfec572e3) bgeu    a0, a2, pc - 28
+(spike) core   0: 0x0000000080000516 (0x00008082) ret
+(spike) core   0: 0x00000000800008f2 (0x000085ca) c.mv    a1, s2
+(spike) core   0: 0x00000000800008f4 (0x00008526) c.mv    a0, s1
+(spike) core   0: 0x00000000800008f6 (0xb5dff0ef) jal     pc - 0x4a4
+(spike) core   0: >>>>  thread_entry
+core   0: 0x0000000080000452 (0x0000e111) c.bnez  a0, pc + 4
+(spike) core   0: 0x0000000080000454 (0x00008082) ret
+(spike) core   0: 0x00000000800008fa (0x100007b7) lui     a5, 0x10000
+(spike) core   0: 0x00000000800008fe (0x0000470d) c.li    a4, 3
+(spike) core   0: 0x0000000080000900 (0x00e781a3) sb      a4, 3(a5)
+(spike) core   0: 0x0000000080000904 (0x00004581) c.li    a1, 0
+(spike) core   0: 0x0000000080000906 (0x00004501) c.li    a0, 0
+(spike) core   0: 0x0000000080000908 (0x8c9ff0ef) jal     pc - 0x738
+(spike) core   0: >>>>  main
+core   0: 0x00000000800001d0 (0x0000712d) c.addi16sp sp, -288
+(spike) core   0: 0x00000000800001d2 (0x0000ee06) c.sdsp  ra, 280(sp)
+(spike) core   0: 0x00000000800001d4 (0x0000ea22) c.sdsp  s0, 272(sp)
+(spike) core   0: 0x00000000800001d6 (0x0000e626) c.sdsp  s1, 264(sp)
+(spike) core   0: 0x00000000800001d8 (0x0000e24a) c.sdsp  s2, 256(sp)
+(spike) core   0: 0x00000000800001da (0x0000fdce) c.sdsp  s3, 248(sp)
+(spike) core   0: 0x00000000800001dc (0x0000f9d2) c.sdsp  s4, 240(sp)
+(spike) core   0: 0x00000000800001de (0x00001797) auipc   a5, 0x1
+(spike) core   0: 0x00000000800001e2 (0x88278793) addi    a5, a5, -1918
+(spike) core   0: 0x00000000800001e6 (0x0007be83) ld      t4, 0(a5)
+(spike) core   0: 0x00000000800001ea (0x0087be03) ld      t3, 8(a5)
+(spike) core   0: 0x00000000800001ee (0x0107b303) ld      t1, 16(a5)
+(spike) core   0: 0x00000000800001f2 (0x0187b883) ld      a7, 24(a5)
+(spike) core   0: 0x00000000800001f6 (0x0207b803) ld      a6, 32(a5)
+(spike) core   0: 0x00000000800001fa (0x00007788) c.ld    a0, 40(a5)
+(spike) core   0: 0x00000000800001fc (0x00007b8c) c.ld    a1, 48(a5)
+(spike) core   0: 0x00000000800001fe (0x00007f90) c.ld    a2, 56(a5)
+(spike) core   0: 0x0000000080000200 (0x000063b4) c.ld    a3, 64(a5)
+(spike) core   0: 0x0000000080000202 (0x000067b8) c.ld    a4, 72(a5)
+(spike) core   0: 0x0000000080000204 (0x0000f176) c.sdsp  t4, 160(sp)
+(spike) core   0: 0x0000000080000206 (0x0000f572) c.sdsp  t3, 168(sp)
+(spike) core   0: 0x0000000080000208 (0x0000f91a) c.sdsp  t1, 176(sp)
+(spike) core   0: 0x000000008000020a (0x0000fd46) c.sdsp  a7, 184(sp)
+(spike) core   0: 0x000000008000020c (0x0000e1c2) c.sdsp  a6, 192(sp)
+(spike) core   0: 0x000000008000020e (0x0000e5aa) c.sdsp  a0, 200(sp)
+(spike) core   0: 0x0000000080000210 (0x0000e9ae) c.sdsp  a1, 208(sp)
+(spike) core   0: 0x0000000080000212 (0x0000edb2) c.sdsp  a2, 216(sp)
+(spike) core   0: 0x0000000080000214 (0x0000f1b6) c.sdsp  a3, 224(sp)
+(spike) core   0: 0x0000000080000216 (0x0000f5ba) c.sdsp  a4, 232(sp)
+(spike) core   0: 0x0000000080000218 (0x20000737) lui     a4, 0x20000
+(spike) core   0: 0x000000008000021c (0x00000705) c.addi  a4, 1
+(spike) core   0: 0x000000008000021e (0x0000c93a) c.swsp  a4, 144(sp)
+(spike) core   0: 0x0000000080000220 (0x20000737) lui     a4, 0x20000
+(spike) core   0: 0x0000000080000224 (0x00000709) c.addi  a4, 2
+(spike) core   0: 0x0000000080000226 (0x0000cb3a) c.swsp  a4, 148(sp)
+(spike) core   0: 0x0000000080000228 (0x20000737) lui     a4, 0x20000
+(spike) core   0: 0x000000008000022c (0x0000070d) c.addi  a4, 3
+(spike) core   0: 0x000000008000022e (0x0000cd3a) c.swsp  a4, 152(sp)
+(spike) core   0: 0x0000000080000230 (0x20000737) lui     a4, 0x20000
+(spike) core   0: 0x0000000080000234 (0x00000711) c.addi  a4, 4
+(spike) core   0: 0x0000000080000236 (0x0000cf3a) c.swsp  a4, 156(sp)
+(spike) core   0: 0x0000000080000238 (0x0507b303) ld      t1, 80(a5)
+(spike) core   0: 0x000000008000023c (0x0587b883) ld      a7, 88(a5)
+(spike) core   0: 0x0000000080000240 (0x0607b803) ld      a6, 96(a5)
+(spike) core   0: 0x0000000080000244 (0x000077a8) c.ld    a0, 104(a5)
+(spike) core   0: 0x0000000080000246 (0x00007bac) c.ld    a1, 112(a5)
+(spike) core   0: 0x0000000080000248 (0x00007fb0) c.ld    a2, 120(a5)
+(spike) core   0: 0x000000008000024a (0x000063d4) c.ld    a3, 128(a5)
+(spike) core   0: 0x000000008000024c (0x000067d8) c.ld    a4, 136(a5)
+(spike) core   0: 0x000000008000024e (0x0000e01a) c.sdsp  t1, 0(sp)
+(spike) core   0: 0x0000000080000250 (0x0000e446) c.sdsp  a7, 8(sp)
+(spike) core   0: 0x0000000080000252 (0x0000e842) c.sdsp  a6, 16(sp)
+(spike) core   0: 0x0000000080000254 (0x0000ec2a) c.sdsp  a0, 24(sp)
+(spike) core   0: 0x0000000080000256 (0x0000f02e) c.sdsp  a1, 32(sp)
+(spike) core   0: 0x0000000080000258 (0x0000f432) c.sdsp  a2, 40(sp)
+(spike) core   0: 0x000000008000025a (0x0000f836) c.sdsp  a3, 48(sp)
+(spike) core   0: 0x000000008000025c (0x0000fc3a) c.sdsp  a4, 56(sp)
+(spike) core   0: 0x000000008000025e (0x0907a783) lw      a5, 144(a5)
+(spike) core   0: 0x0000000080000262 (0x0000c0be) c.swsp  a5, 64(sp)
+(spike) core   0: 0x0000000080000264 (0x00004505) c.li    a0, 1
+(spike) core   0: 0x0000000080000266 (0x156000ef) jal     pc + 0x156
+(spike) core   0: >>>>  setStats
+core   0: 0x00000000800003bc (0xb00027f3) csrr    a5, mcycle
+(spike) core   0: 0x00000000800003c0 (0x0000ed01) c.bnez  a0, pc + 24
+(spike) core   0: 0x00000000800003d8 (0x00001717) auipc   a4, 0x1
+(spike) core   0: 0x00000000800003dc (0xc6f73823) sd      a5, -912(a4)
+(spike) core   0: 0x00000000800003e0 (0xb02027f3) csrr    a5, minstret
+(spike) core   0: 0x00000000800003e4 (0x0000ed01) c.bnez  a0, pc + 24
+(spike) core   0: 0x00000000800003fc (0x80f1b423) sd      a5, -2040(gp)
+(spike) core   0: 0x0000000080000400 (0x00008082) ret
+(spike) core   0: 0x000000008000026a (0x000000a4) c.addi4spn s1, sp, 72
+(spike) core   0: 0x000000008000026c (0x00004711) c.li    a4, 4
+(spike) core   0: 0x000000008000026e (0x000046d1) c.li    a3, 20
+(spike) core   0: 0x0000000080000270 (0x00008626) c.mv    a2, s1
+(spike) core   0: 0x0000000080000272 (0x0000090c) c.addi4spn a1, sp, 144
+(spike) core   0: 0x0000000080000274 (0x00001108) c.addi4spn a0, sp, 160
+(spike) core   0: 0x0000000080000276 (0x06c000ef) jal     pc + 0x6c
+(spike) core   0: >>>>  fir
+core   0: 0x00000000800002e2 (0x00001141) c.addi  sp, -16
+(spike) core   0: 0x00000000800002e4 (0x0000c022) c.swsp  s0, 0(sp)
+(spike) core   0: 0x00000000800002e6 (0x0000c226) c.swsp  s1, 4(sp)
+(spike) core   0: 0x00000000800002e8 (0x0000c44a) c.swsp  s2, 8(sp)
+(spike) core   0: 0x00000000800002ea (0x0000c606) c.swsp  ra, 12(sp)
+(spike) core   0: 0x00000000800002ec (0x00004401) c.li    s0, 0
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: 0x00000000800002f2 (0x00004901) c.li    s2, 0
+(spike) core   0: 0x00000000800002f4 (0x00004481) c.li    s1, 0
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: 0x00000000800002fa (0xfff70293) addi    t0, a4, -1
+(spike) core   0: 0x00000000800002fe (0x40940333) sub     t1, s0, s1
+(spike) core   0: 0x0000000080000302 (0x0000929a) c.add   t0, t1
+(spike) core   0: 0x0000000080000304 (0x0000028a) c.slli  t0, 2
+(spike) core   0: 0x0000000080000306 (0x000092ae) c.add   t0, a1
+(spike) core   0: 0x0000000080000308 (0x0002a283) lw      t0, 0(t0)
+(spike) core   0: 0x000000008000030c (0x00249313) slli    t1, s1, 2
+(spike) core   0: 0x0000000080000310 (0x0000932a) c.add   t1, a0
+(spike) core   0: 0x0000000080000312 (0x00032303) lw      t1, 0(t1)
+(spike) core   0: 0x0000000080000316 (0x025302b3) mul     t0, t1, t0
+(spike) core   0: 0x000000008000031a (0x00009916) c.add   s2, t0
+(spike) core   0: 0x000000008000031c (0x00000485) c.addi  s1, 1
+(spike) core   0: 0x000000008000031e (0x0000bfe1) c.j     pc - 40
+(spike) core   0: >>>>  inner_loop
+core   0: 0x00000000800002f6 (0x02e4d563) bge     s1, a4, pc + 42
+(spike) core   0: >>>>  end_inner
+core   0: 0x0000000080000320 (0x00241293) slli    t0, s0, 2
+(spike) core   0: 0x0000000080000324 (0x000092b2) c.add   t0, a2
+(spike) core   0: 0x0000000080000326 (0x0122a023) sw      s2, 0(t0)
+(spike) core   0: 0x000000008000032a (0x00000405) c.addi  s0, 1
+(spike) core   0: 0x000000008000032c (0x0000b7c9) c.j     pc - 62
+(spike) core   0: >>>>  outer_loop
+core   0: 0x00000000800002ee (0x04d45063) bge     s0, a3, pc + 64
+(spike) core   0: >>>>  end_outer
+core   0: 0x000000008000032e (0x00004402) c.lwsp  s0, 0(sp)
+(spike) core   0: 0x0000000080000330 (0x00004492) c.lwsp  s1, 4(sp)
+(spike) core   0: 0x0000000080000332 (0x00004922) c.lwsp  s2, 8(sp)
+(spike) core   0: 0x0000000080000334 (0x000040b2) c.lwsp  ra, 12(sp)
+(spike) core   0: 0x0000000080000336 (0x00000141) c.addi  sp, 16
+(spike) core   0: 0x0000000080000338 (0x00008082) ret
+(spike) core   0: exception trap_instruction_access_fault, epc 0xffffffff8000027a
+core   0:           tval 0xffffffff8000027a
+(spike) core   0: >>>>  trap_entry
+core   0: 0x0000000080000120 (0x0000716d) c.addi16sp sp, -272
+(spike) core   0: 0x0000000080000122 (0x0000e406) c.sdsp  ra, 8(sp)
+(spike) core   0: 0x0000000080000124 (0x0000e80a) c.sdsp  sp, 16(sp)
+(spike) core   0: 0x0000000080000126 (0x0000ec0e) c.sdsp  gp, 24(sp)
+(spike) core   0: 0x0000000080000128 (0x0000f012) c.sdsp  tp, 32(sp)
+(spike) core   0: 0x000000008000012a (0x0000f416) c.sdsp  t0, 40(sp)
+(spike) core   0: 0x000000008000012c (0x0000f81a) c.sdsp  t1, 48(sp)
+(spike) core   0: 0x000000008000012e (0x0000fc1e) c.sdsp  t2, 56(sp)
+(spike) core   0: 0x0000000080000130 (0x0000e0a2) c.sdsp  s0, 64(sp)
+(spike) core   0: 0x0000000080000132 (0x0000e4a6) c.sdsp  s1, 72(sp)
+(spike) core   0: 0x0000000080000134 (0x0000e8aa) c.sdsp  a0, 80(sp)
+(spike) core   0: 0x0000000080000136 (0x0000ecae) c.sdsp  a1, 88(sp)
+(spike) core   0: 0x0000000080000138 (0x0000f0b2) c.sdsp  a2, 96(sp)
+(spike) core   0: 0x000000008000013a (0x0000f4b6) c.sdsp  a3, 104(sp)
+(spike) core   0: 0x000000008000013c (0x0000f8ba) c.sdsp  a4, 112(sp)
+(spike) core   0: 0x000000008000013e (0x0000fcbe) c.sdsp  a5, 120(sp)
+(spike) core   0: 0x0000000080000140 (0x0000e142) c.sdsp  a6, 128(sp)
+(spike) core   0: 0x0000000080000142 (0x0000e546) c.sdsp  a7, 136(sp)
+(spike) core   0: 0x0000000080000144 (0x0000e94a) c.sdsp  s2, 144(sp)
+(spike) core   0: 0x0000000080000146 (0x0000ed4e) c.sdsp  s3, 152(sp)
+(spike) core   0: 0x0000000080000148 (0x0000f152) c.sdsp  s4, 160(sp)
+(spike) core   0: 0x000000008000014a (0x0000f556) c.sdsp  s5, 168(sp)
+(spike) core   0: 0x000000008000014c (0x0000f95a) c.sdsp  s6, 176(sp)
+(spike) core   0: 0x000000008000014e (0x0000fd5e) c.sdsp  s7, 184(sp)
+(spike) core   0: 0x0000000080000150 (0x0000e1e2) c.sdsp  s8, 192(sp)
+(spike) core   0: 0x0000000080000152 (0x0000e5e6) c.sdsp  s9, 200(sp)
+(spike) core   0: 0x0000000080000154 (0x0000e9ea) c.sdsp  s10, 208(sp)
+(spike) core   0: 0x0000000080000156 (0x0000edee) c.sdsp  s11, 216(sp)
+(spike) core   0: 0x0000000080000158 (0x0000f1f2) c.sdsp  t3, 224(sp)
+(spike) core   0: 0x000000008000015a (0x0000f5f6) c.sdsp  t4, 232(sp)
+(spike) core   0: 0x000000008000015c (0x0000f9fa) c.sdsp  t5, 240(sp)
+(spike) core   0: 0x000000008000015e (0x0000fdfe) c.sdsp  t6, 248(sp)
+(spike) core   0: 0x0000000080000160 (0x34202573) csrr    a0, mcause
+(spike) core   0: 0x0000000080000164 (0x341025f3) csrr    a1, mepc
+(spike) core   0: 0x0000000080000168 (0x0000860a) c.mv    a2, sp
+(spike) core   0: 0x000000008000016a (0x2aa000ef) jal     pc + 0x2aa
+(spike) core   0: >>>>  handle_trap
+core   0: 0x0000000080000414 (0x00001141) c.addi  sp, -16
+(spike) core   0: 0x0000000080000416 (0x0000e406) c.sdsp  ra, 8(sp)
+(spike) core   0: 0x0000000080000418 (0x53900513) li      a0, 1337
+(spike) core   0: 0x000000008000041c (0xfe7ff0ef) jal     pc - 0x1a
+(spike) core   0: >>>>  tohost_exit
+core   0: 0x0000000080000402 (0x00151793) slli    a5, a0, 1
+(spike) core   0: 0x0000000080000406 (0x0017e793) ori     a5, a5, 1
+(spike) core   0: 0x000000008000040a (0x00001717) auipc   a4, 0x1
+(spike) core   0: 0x000000008000040e (0xbef73b23) sd      a5, -1034(a4)
+*** FAILED *** (tohost = 1337)
