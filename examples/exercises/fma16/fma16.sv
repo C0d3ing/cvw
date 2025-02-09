@@ -7,7 +7,8 @@ module fma16(input  logic [15:0] x, y, z,
              output logic [3:0] flags);
 
 
-    multUnit mu()
+    multUnit mu(x, y, negp, result);
+    assign flags = 0;
 
 module multUnit(input logic [15:0] x,y,
                 input logic negp,
