@@ -1,4 +1,4 @@
-`include “wally-config.vh”
+
 
 module fma16(input  logic [15:0] x, y, z,
              input  logic mul, add, negp, negz,
@@ -9,13 +9,15 @@ module fma16(input  logic [15:0] x, y, z,
 
     multUnit mu(x, y, negp, result);
     assign flags = 0;
+endmodule
 
 module multUnit(input logic [15:0] x,y,
                 input logic negp,
-                output result); 
+                output [15:0] result); 
     
-    always_comb begin : blockName
-        out[9:0] = x[9:0] * y[9:0];
-        out[14:10] = x[14:10] + y[14:10] - 127;
-        out[15] = negp ? (x[15] ^ y[14]) : ~(x[15] ^ y[14])
+    always_comb begin
+        result[9:0] = x[9:0] * y[9:0];
+        result[14:10] = x[14:10] + y[14:10] - 16;
+        result[15] = negp ? (x[15] ^ y[14]) : ~(x[15] ^ y[14]);
     end
+endmodule
