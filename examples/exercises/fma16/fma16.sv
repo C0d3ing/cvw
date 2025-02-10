@@ -14,10 +14,10 @@ module multUnit(input logic [15:0] x, y,
                 output logic [15:0] result); 
 
     logic sign_x, sign_y, sign_result;
-    logic [4:0] exp_x, exp_y, exp_result;
+    logic [4:0] exp_x, exp_y;
     logic [10:0] frac_x, frac_y, frac_result;
     logic [21:0] full_frac_result;
-    logic [5:0] exp_temp;
+    logic [5:0] exp_temp, exp_result;
 
     always_comb begin
         // Extract sign, exponent, and fraction
@@ -40,7 +40,7 @@ module multUnit(input logic [15:0] x, y,
             frac_result = full_frac_result[20:10];
             exp_result = exp_temp;
         end
-
+ 
         // Handle sign
         sign_result = negp ? ~(sign_x ^ sign_y) : (sign_x ^ sign_y);
 
