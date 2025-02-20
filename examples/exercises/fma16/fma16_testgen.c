@@ -128,10 +128,10 @@ void genAddTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, 
             for (k=0; k<=sgn; k++) {
                 z.v ^= (k<<15);
                 genCase(fptr, x, y, z, 0, 1, k, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
-                genCase(fptr, x, y, z, 0, 1, 0, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
-                genCase(fptr, x, y, z, 0, 1, k, k, roundingMode, zeroAllowed, infAllowed, nanAllowed); // tests negative, negative
-
-                
+                if (sgn == 1){ // to ensure the same test does not get generated three times when k = 1
+                    genCase(fptr, x, y, z, 0, 1, 0, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 0, 1, k, k, roundingMode, zeroAllowed, infAllowed, nanAllowed); // tests negative, negative 
+                }
             }
         }
     }
@@ -162,6 +162,10 @@ void genMultiplyAccumulateTests(uint16_t *e, uint16_t *f, int sgn, char *testNam
                     for (k=0; k<=sgn; k++) {
                         z.v ^= (k<<15);
                         genCase(fptr, x, y, z, 1, 1, k, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                        if (sgn == 1) { // to ensure the same test does not get generated three times when k = 1
+                            genCase(fptr, x, y, z, 1, 1, 0, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                            genCase(fptr, x, y, z, 1, 1, k, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                        }
                     }
                 }
             }
@@ -192,6 +196,10 @@ void genSpecialTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *de
                 for (k=0; k<=sgn; k++) {
                     z.v ^= (k<<15);
                     genCase(fptr, x, y, z, 1, 1, k, 0, roundingMode, 1, 1, 1); // last 3 inputs set to 1: zeroAllowed, infAllowed, nanAllowed
+                    if (sgn == 1){ // to ensure the same test does not get generated three times when k = 1
+                        genCase(fptr, x, y, z, 1, 1, 0, k, roundingMode, 1, 1, 1); 
+                        genCase(fptr, x, y, z, 1, 1, k, k, roundingMode, 1, 1, 1);
+                    }
                 }
             }
 
@@ -221,6 +229,10 @@ void genMulTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, 
             for (k=0; k<=sgn; k++) {
                 y.v ^= (k<<15);
                 genCase(fptr, x, y, z, 1, 0, k, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                if (sgn == 1){ // to ensure the same test does not get generated three times when k = 1
+                genCase(fptr, x, y, z, 1, 0, 0, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                genCase(fptr, x, y, z, 1, 0, k, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                }
             }
         }
     }
@@ -251,7 +263,6 @@ int main()
 
     //Test Cases: Special 
     genSpecialTests(specialExponents, specialFracts, 0, "spe_0", "// Special testcases of FMA (Nan, zeros, and inf allowed)", 0);
-    genSpecialTests(specialExponents, specialFracts, 0, "spe_1", "// Special testcases of FMA (Nan, zeros, and inf allowed), cornercases of positive inputs", 0);
     genSpecialTests(specialExponents, specialFracts, 1, "spe_2", "// Special testcases of FMA (Nan, zeros, and inf allowed), corner cases of inputs", 0);
 
     //Test Cases: Special w/ Rounding mode
@@ -261,8 +272,8 @@ int main()
     softfloat_roundingMode = softfloat_round_max; 
     genSpecialTests(specialExponents, specialFracts, 1, "spe_RP_2", "// Special testcases of FMA (Nan, zeros, and inf allowed), corner cases of inputs, RP rounding mode", 2);
 
-    softfloat_roundingMode = softfloat_round_near_maxMag; 
-    genSpecialTests(specialExponents, specialFracts, 1, "spe_RN_2", "// Special testcases of FMA (Nan, zeros, and inf allowed), corner cases of inputs, RN rounding mode", 3);
+    softfloat_roundingMode = softfloat_round_minMag; 
+    genSpecialTests(specialExponents, specialFracts, 1, "spe_RM_2", "// Special testcases of FMA (Nan, zeros, and inf allowed), corner cases of inputs, RM rounding mode", 3);
 
 
 /*  // example of how to generate tests with a different rounding mode
