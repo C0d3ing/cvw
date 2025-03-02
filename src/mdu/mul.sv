@@ -56,30 +56,30 @@ module mul #(parameter XLEN) (
 
       3'b000: begin // MUL
         PP1E = Aprime*Bprime;
-        PP2E = Bm*Aprime;
-        PP3E = Am*Bprime;
-        PP4E = (Am*Bm) << (2*XLEN -2);
+        PP2E = Bm&Aprime;
+        PP3E = Am&Bprime;
+        PP4E = (Am&Bm) << (2*XLEN -2);
       end
 
       3'b001: begin //MULH
         PP1E = Aprime*Bprime;
-        PP2E = ~(Bm*Aprime);
-        PP3E = ~(Am*Bprime);
-        PP4E = ((Am*Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN);
+        PP2E = ~(Bm&Aprime);
+        PP3E = ~(Am&Bprime);
+        PP4E = ((Am&Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN);
       end
 
       3'b010: begin //MULHSU
         PP1E = Aprime*Bprime;
-        PP2E = ~(Bm*Aprime);
-        PP3E = ~(Am*Bprime);
-        PP4E = ((Am*Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN-1);
+        PP2E = ~(Bm&Aprime);
+        PP3E = ~(Am&Bprime);
+        PP4E = ((Am&Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN-1);
       end
 
       3'b011: begin //MULHU
         PP1E = Aprime*Bprime;
-        PP2E = Bm*Aprime;
-        PP3E = ~(Am*Bprime);
-        PP4E = ((Am*Bm) << (2*XLEN -2));
+        PP2E = Bm&Aprime;
+        PP3E = ~(Am&Bprime);
+        PP4E = ((Am&Bm) << (2*XLEN -2));
       end
 
       default begin
