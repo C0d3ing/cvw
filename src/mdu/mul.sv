@@ -51,34 +51,33 @@ module mul #(parameter XLEN) (
     Bm = ForwardedSrcBE[XLEN-1];
     Bprime = ForwardedSrcBE[XLEN-2:0];
 
+    PP1E = Aprime*Bprime;
   
     case(Funct3E)
 
       3'b000: begin // MUL
-        PP1E = Aprime*Bprime;
-        PP2E = Bm*Aprime;
-        PP3E = Am*Bprime;
+        
+        PP2E = (Bm*Aprime)<<(XLEN-1);
+        PP3E = (Am*Bprime)<<(XLEN-1);
         PP4E = (Am*Bm) << (2*XLEN -2);
       end
 
       3'b001: begin //MULH
-        PP1E = Aprime*Bprime;
-        PP2E = ~(Bm*Aprime);
-        PP3E = ~(Am*Bprime);
-        PP4E = ((Am*Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN);
+        PP2E = { 2'b00,~(Bm*Aprime), {(XLEN-1){1'b0}}}; //in example p2 two MSB are always 0
+        PP3E = { 2'b00,~(Am*Bprime), {(XLEN-1){1'b0}}};
+        PP4E = ((Am*Bm) << (2*XLEN -2)) + (1 << (2*XLEN-1)) + (1 << XLEN);
       end
 
       3'b010: begin //MULHSU
-        PP1E = Aprime*Bprime;
-        PP2E = ~(Bm*Aprime);
-        PP3E = ~(Am*Bprime);
-        PP4E = ((Am*Bm) << (2*XLEN -2)) + (1 << 2*XLEN-1) + (1 << XLEN-1);
+        PP2E = { 2'b00, (Bm*Aprime), {(XLEN-1){1'b0}}};
+        PP3E = { 2'b00, ~(Am*Bprime), {(XLEN-1){1'b0}}};
+        PP4E = {1'b1, ~(Am&Bm), {(XLEN-2){1'b0}}, 1'b1, {(XLEN-1){1'b0}}};
+        //PP4E = ((~(Am&Bm)) << (2*XLEN -2)) + (1 << (2*XLEN-1)) + (1 << (XLEN-1));
       end
 
       3'b011: begin //MULHU
-        PP1E = Aprime*Bprime;
-        PP2E = Bm*Aprime;
-        PP3E = ~(Am*Bprime);
+        PP2E = { 2'b00, (Bm*Aprime), {(XLEN-1){1'b0}}};
+        PP3E = { 2'b00, (Am*Bprime), {(XLEN-1){1'b0}}};
         PP4E = ((Am*Bm) << (2*XLEN -2));
       end
 
