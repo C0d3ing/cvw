@@ -54,14 +54,6 @@ module mul #(parameter XLEN) (
     PP1E = Aprime*Bprime;
   
     case(Funct3E)
-
-      3'b000: begin // MUL
-        
-        PP2E = (Bm*Aprime)<<(XLEN-1);
-        PP3E = (Am*Bprime)<<(XLEN-1);
-        PP4E = (Am*Bm) << (2*XLEN -2);
-      end
-
       3'b001: begin //MULH
         PP2E = { 2'b00,~(Bm*Aprime), {(XLEN-1){1'b0}}}; //in example p2 two MSB are always 0
         PP3E = { 2'b00,~(Am*Bprime), {(XLEN-1){1'b0}}};
@@ -81,11 +73,10 @@ module mul #(parameter XLEN) (
         PP4E = ((Am*Bm) << (2*XLEN -2));
       end
 
-      default begin
-        PP1E = '0;
-        PP2E = '0;
-        PP3E = '0;
-        PP4E = '0;
+      default begin //mul and mulw
+        PP2E = (Bm*Aprime)<<(XLEN-1);
+        PP3E = (Am*Bprime)<<(XLEN-1);
+        PP4E = (Am*Bm) << (2*XLEN -2);
       end
     endcase
   end
