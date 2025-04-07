@@ -52,14 +52,15 @@ void genCase(FILE *fptr, float16_t x, float16_t y, float16_t z, int mul, int add
 
     if (!mul) y.v = 0x3C00; // force y to 1 to avoid multiply
     if (!add) z.v = 0x0000; // force z to 0 to avoid add
-    if (negp) x.v = ; // assign -1.0 to tempNegp
+    if (negp) x.v ^= 0x8000; // flip sign bit
     if (negz) z.v ^= 0x8000; // flip sign of z to negate z
     op = roundingMode << 4 | mul<<3 | add<<2 | negp<<1 | negz;
 //    printf("op = %02x rm %d mul %d add %d negp %d negz %d\n", op, roundingMode, mul, add, negp, negz);
     softfloat_exceptionFlags = 0; // clear exceptions
     result = f16_mulAdd(x, y, z); // call SoftFloat to compute expected result
 
-    if (negp) x.v = ;
+    if (negp) x.v ^= 0x8000; // flip sign bit to print original x value
+    if (negz) z.v ^= 0x8000; // flip sign of z to negate z
 
     // Extract expected flags from SoftFloat
     sprintf(flags, "NV: %d OF: %d UF: %d NX: %d", 
