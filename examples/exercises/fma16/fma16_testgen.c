@@ -158,8 +158,8 @@ void genMultiplyAccumulateTests(uint16_t *e, uint16_t *f, int sgn, char *testNam
         x.v = cases[i].v;
         for (j=0; j<numCases; j++) {
             y.v = cases[j].v;
-            for(s=0; s<sgn; s++){ 
-                y.v ^= cases[i].v; 
+            // for(s=0; s<sgn; s++){ 
+            //     y.v ^= cases[i].v; 
                 for (t=0;  t<numCases; t++){
                     z.v = cases[t].v;
                     for (k=0; k<=sgn; k++) {
@@ -168,7 +168,7 @@ void genMultiplyAccumulateTests(uint16_t *e, uint16_t *f, int sgn, char *testNam
                         if (sgn == 1) { // to ensure the same test does not get generated three times when k = 1
                             genCase(fptr, x, y, z, 1, 1, 0, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
                             genCase(fptr, x, y, z, 1, 1, k, k, roundingMode, zeroAllowed, infAllowed, nanAllowed);
-                        }
+                        // }
                     }
                 }
             }
