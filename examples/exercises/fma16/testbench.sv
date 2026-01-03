@@ -9,6 +9,8 @@ module testbench_fma16;
   logic [75:0] testvectors[10000:0];
   logic [3:0]  flags, flagsexpected; // Invalid, Overflow, Underflow, Inexact
 
+
+
   // instantiate device under test
   fma16 dut(x, y, z, mul, add, negp, negz, roundmode, result, flags);
 
@@ -21,9 +23,13 @@ module testbench_fma16;
   // at start of test, load vectors and pulse reset
   initial
     begin
-      $readmemh("tests/fmul_0.tv", testvectors);
+      $readmemh("tests/fma_special_rz.tv", testvectors);
       vectornum = 0; errors = 0;
       reset = 1; #22; reset = 0;
+
+      $dumpfile("fma16.vcd");
+      $dumpvars(0, testbench_fma16);
+      #1000;
     end
 
   // apply test vectors on rising edge of clk
